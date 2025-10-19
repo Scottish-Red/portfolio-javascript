@@ -1,0 +1,80 @@
+        .gradient-background {
+            background: linear-gradient(135deg, #6e15aa, #717cdd, #c06c9d, #a999bd);
+            background-size: 400% 400%;
+            animation: gradient-animation 10s ease infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .hero-avatar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        
+        .hero-buttons {
+            margin-top: 20px;
+            margin: 5px 0;
+        }
+
+        .hero-buttons a {
+            color: #6e15aa;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        body {
+            font-family: "Lucida Sans", sans-serif;
+            background-color: #000000;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            font-variant: small-caps;
+        }
+
+        h1 {
+            white-space: nowrap;
+            color: #6e15aa;
+            padding-left:20px;
+            padding-right: 20px;
+        }
+
+        hr {
+            border-top: 4px groove #7c6e8d;
+        }
+
+        .skills, .projects {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .skills ul, .projects ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .projects a {
+            color: #6e15aa;
+            text-decoration: none;
+        }
