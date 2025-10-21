@@ -56,6 +56,13 @@
             text-decoration: none;
         }
 
+        .projects img {
+            height: 50px;
+            width: 50px;
+            padding: 8px;
+            margin: 10px;
+        }
+
         .education ul, .experience ul {
             list-style-type: none;
             padding-left: 20px;
