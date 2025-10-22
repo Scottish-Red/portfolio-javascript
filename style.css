@@ -46,8 +46,7 @@
             animation-name: myRulerAnime;
             animation-duration: 30s;
             animation-iteration-count: infinite;
-            height: 2px;
-            /* background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo); */
+            height: 3px;
         }
 
         @keyframes myRulerAnime {
