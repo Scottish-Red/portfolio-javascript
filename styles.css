@@ -95,3 +95,10 @@
         .experience ul li details ul {
             list-style-type: disc;
         }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            line-height: 1px;
+        }
+        

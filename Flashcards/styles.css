@@ -1,0 +1,54 @@
+/* Styles for Flashcards Application */
+
+body {
+  background: #D7CCC8;
+  text-align: center;
+}
+
+.button {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {border: 2px solid red;}
+.button2 {border: 2px solid orange;}
+.button3 {border: 2px solid yellow;}
+.button4 {border: 2px solid green;}
+.button5 {border: 2px solid blue;}
+.button6 {border: 2px solid purple;}
+.button7 {border: 2px solid pink;}
+.button8 {border: 2px solid black;}
+
+.button1:hover { background-color: red; color: white; }
+.button2:hover { background-color: orange; color: white; }
+.button3:hover { background-color: yellow; color: white; }
+.button4:hover { background-color: green; color: white; }
+.button5:hover { background-color: blue; color: white; }
+.button6:hover { background-color: purple; color: white; }
+.button7:hover { background-color: pink; color: white; }
+.button8:hover { background-color: black; color: white; }
+
+
+/* #red-back {color: red; font-weight: normal}
+#orange-back {color: orange; font-weight: normal}
+#yellow-back {color: yellow;font-weight: normal}
+#green-back {color: green;font-weight: normal}
+#blue-back {color: blue;font-weight: normal}
+#purple-back {color: purple;font-weight: normal}
+#pink-back {color: rgba(221, 85, 198, 0.932);font-weight: normal}
+#black-back {color: rgb(0, 0, 0);font-weight: normal} */
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    line-height: 10px;
+}
