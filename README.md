@@ -8,4 +8,5 @@ Files included:
 4. Party Invite
 5. Resume
 6. Beans (Queens game)
-   
+7. Flashcards (language learning)
+8. images folder - assets for all the rest
