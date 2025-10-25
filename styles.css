@@ -1,104 +1,103 @@
-        .hero-avatar img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
+.hero-avatar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
 
-        .flex-container {
-            display: flex;
-            flex-direction: column;
-            max-width: 600px;
-            margin: auto;
-            padding: 20px;
-        }
-        
-        .hero-buttons {
-            margin: auto;
-        }
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
 
-        .hero-buttons a {
-            color: #6e15aa;
-            text-decoration: none;
-            margin: 0 20px;
-        }
+.hero-buttons {
+    margin: auto;
+}
 
-        body {
-            font-family: "Lucida Sans", sans-serif;
-            background-color: #000000;
-            color: #cccccc;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-            font-variant: small-caps;
-        }
+.hero-buttons a {
+    color: #6e15aa;
+    text-decoration: none;
+    margin: 0 20px;
+}
 
-        h1 {
-            white-space: nowrap;
-            color: #6e15aa;
-            padding-left:20px;
-            padding-right: 20px;
-        }
+body {
+    font-family: "Lucida Sans", sans-serif;
+    background-color: #000000;
+    color: #cccccc;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    font-variant: small-caps;
+}
 
-        hr {
-            background-color: white;
-            animation-name: myRulerAnime;
-            animation-duration: 30s;
-            animation-iteration-count: infinite;
-            height: 3px;
-        }
+h1 {
+    white-space: nowrap;
+    color: #6e15aa;
+    padding-left:20px;
+    padding-right: 20px;
+}
 
-        @keyframes myRulerAnime {
-            0%   {background-color: red;}
-            10%  {background-color: orange;}
-            20%  {background-color: yellow;}
-            30%  {background-color: green;}
-            40%  {background-color: blue;}
-            50%  {background-color: purple;}
-            60%  {background-color: blue;}
-            70%  {background-color: green;}
-            80%  {background-color: yellow;}
-            90%  {background-color: orange;}
-            100% {background-color: red;}
-        }
+hr {
+    background-color: white;
+    animation-name: myRulerAnime;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    height: 3px;
+}
 
-        .skills ul, .projects ul {
-            text-align: left;
-            list-style-type: none;
-            padding-left: 20px;
-        }
+@keyframes myRulerAnime {
+    0%   {background-color: red;}
+    10%  {background-color: orange;}
+    20%  {background-color: yellow;}
+    30%  {background-color: green;}
+    40%  {background-color: blue;}
+    50%  {background-color: purple;}
+    60%  {background-color: blue;}
+    70%  {background-color: green;}
+    80%  {background-color: yellow;}
+    90%  {background-color: orange;}
+    100% {background-color: red;}
+}
 
-        .projects a {
-            color: #6e15aa;
-            text-decoration: none;
-        }
+.skills ul, .projects ul {
+    text-align: left;
+    list-style-type: none;
+    padding-left: 20px;
+}
 
-        .projects img {
-            height: 50px;
-            width: 50px;
-            padding: 8px;
-            margin: 10px;
-        }
+.projects a {
+    color: #6e15aa;
+    text-decoration: none;
+}
 
-        .projects img:hover {
-            transform: scale(2);
-            transition: transform 0.4s;
-        }
+.projects img {
+    height: 50px;
+    width: 50px;
+    padding: 8px;
+    margin: 10px;
+}
 
-        .education ul, .experience ul {
-            list-style-type: none;
-            padding-left: 20px;
-            text-align: left;
-        }
+.projects img:hover {
+    transform: scale(2);
+    transition: transform 0.4s;
+}
 
-        .experience ul li details ul {
-            list-style-type: disc;
-        }
+.education ul, .experience ul {
+    list-style-type: none;
+    padding-left: 20px;
+    text-align: left;
+}
 
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            line-height: 1px;
-        }
-        
+.experience ul li details ul {
+    list-style-type: disc;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    line-height: 1px;
+}
