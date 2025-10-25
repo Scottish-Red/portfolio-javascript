@@ -17,4 +17,4 @@ Files include:
   <!-- Games -->
   * Dicee Game
   * Lunoku (Sudoku-like game)      
-  * Beans (Queens game
+  * Beans (Queens game)
