@@ -1,12 +1,20 @@
 # portfolio-javascript
-Holds my portfolio website
+This is my portfolio site for all my javascript projects.
 
-Files included:
-1. Dicee Game
-2. Lunoku (Sudoku game)
-3. Movie Ranking
-4. Party Invite
-5. Resume
-6. Beans (Queens game)
-7. Flashcards (language learning)
-8. images folder - assets for all the rest
+Files include:
+  <!-- Simple Pages, usually one or two techs in the stack, like HTML and CSS -->
+  * Movie Ranking
+  * Party Invite
+  * Web Design Agency
+  
+  <!-- More Advanced Pages, two or more techs in the stack, like HTML & CSS, plus some fancier actions on the page -->
+  * Portfolio Website (this site)</a></li>
+  * Resume
+  
+  <!-- Complex Pages, with at least three techs (JS-html-css), and some very fancy interactions -->
+  * Flashcards (language learning)
+  
+  <!-- Games -->
+  * Dicee Game
+  * Lunoku (Sudoku-like game)      
+  * Beans (Queens game
