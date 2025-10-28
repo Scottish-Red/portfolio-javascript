@@ -13,7 +13,7 @@ var names = [
     "Liora Kestrel",
     "Malcolm Dredge",
     "Seraphine Locke",
-    "Nathaniel cross",
+    "Nathaniel Cross",
     "Ophelia Stroud",
     "Julian Veylor",
     "Mireille Duskbane",
