@@ -1,0 +1,30 @@
+body {
+    font-family: Lobster, cursive;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+main { flex: 1; }
+
+#output {
+    font-family: monospace;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid black;
+    animation: caret 0.75s steps(1) infinite;
+}
+
+@keyframes caret {
+    50% { border-color: transparent; }
+}
+
+footer {
+    font-size: 12px;
+}
