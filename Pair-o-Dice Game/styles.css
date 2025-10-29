@@ -5,12 +5,25 @@ main {
   flex: 1;
 }
 
+#btnRoll {
+  font-family: 'Atma', serif;
+  font-size: 2rem;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #232931;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
 .dice {
   text-align: center;
   display: inline-block;
   font-family: 'Atma', serif;
   color: #761ee9;
-  font-size: 2rem;
+  font-size: 3rem;
+  margin: 20px;
 }
 
 body {
@@ -35,7 +48,7 @@ h1 {
 
 img {
   width: 8rem;
-  padding: 20px;;
+  padding: 20px;
 }
 
 footer {

@@ -10,7 +10,11 @@
 
     <body>
         <main>
-            <h1>Refresh or press F5</h1>
+            <h1>Welcome to Pair-O-Dice!</h1>  <!-- This displays the winner; Either Player 1 or Player 2, or draw -->
+
+            <div class="container">
+                <button id="btnRoll">Roll the Dice</button>
+            </div>
 
             <div class="dice">
                 <p>Player 1</p>
@@ -23,6 +27,9 @@
             </div>
         </main>
         <script src="scripts.js"></script>
+        <script>
+            document.getElementById("btnRoll").addEventListener("click", btnRoll);
+        </script>
     </body>
 
     <footer>
