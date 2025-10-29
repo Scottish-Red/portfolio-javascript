@@ -1,0 +1,46 @@
+main {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  flex: 1;
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+  font-family: 'Atma', serif;
+  color: #761ee9;
+  font-size: 2rem;
+}
+
+body {
+  background-color: #7191c4;
+  font-family: 'Atma', serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+  margin: 30px;
+  text-shadow: 5px 0 #232931;
+  font-size: 6rem;
+  color: #761ee9;
+}
+
+img {
+  width: 8rem;
+  padding: 20px;;
+}
+
+footer {
+  margin-top: 5%;
+  color: #761ee9;
+  text-align: center;
+  font-size: 2rem;
+}
