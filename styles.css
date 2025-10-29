@@ -77,8 +77,10 @@ hr {
 .projects img {
     height: 50px;
     width: 50px;
-    padding: 8px;
     margin: 10px;
+    border-radius: 100px;
+    border-color: blueviolet;
+    border-style: solid;
 }
 
 .projects img:hover {
