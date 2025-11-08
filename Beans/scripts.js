@@ -66,10 +66,10 @@ function initializeGame() {
     // Step 2.5: Verify the puzzle has exactly one solution
     // Keep regenerating until we have a unique solution
     let attempts = 0;
-    const maxAttempts = 10;
-    while (attempts < maxAttempts) {
+    while (true) {
         const solutionCount = countSolutions();
-        console.log(`Found ${solutionCount} solution(s)`);
+        attempts++;
+        console.log(`Attempt ${attempts}: Found ${solutionCount} solution(s)`);
         
         if (solutionCount === 1) {
             console.log('Puzzle has unique solution!');
@@ -78,14 +78,7 @@ function initializeGame() {
             // Multiple solutions exist, regenerate regions
             console.log('Multiple solutions detected, regenerating...');
             generateRegionsFromSolution();
-            attempts++;
         }
-    }
-    
-    // If we couldn't find a unique solution after max attempts, continue anyway
-    // (The puzzle will still be valid, just may have multiple solutions)
-    if (attempts === maxAttempts) {
-        console.log('Using puzzle (may have multiple solutions)');
     }
     
     // Step 3: Draw the game board on the screen with the colored regions
@@ -634,7 +627,10 @@ function handleCellClick(row, col, cell, clickType) {
                 return;
             }
             
-            beansPlaced.push({ row, col }); // Add to beansPlaced array
+            // Get the region index for this cell
+            const regionIndex = regions[row * gridSize + col];
+            
+            beansPlaced.push({ row, col, region: regionIndex }); // Add to beansPlaced array with region tracking
             const bean = document.createElement('div');
             bean.className = 'bean';
             cell.appendChild(bean); // Add visual bean
@@ -642,7 +638,7 @@ function handleCellClick(row, col, cell, clickType) {
             
             // Automatically place X markers in cells where beans can't go
             if (autoFillXCheckbox.checked) {
-                autoFillXMarkers(row, col);
+                autoFillXMarkers(row, col, regionIndex);
             }
         }
     } else if (clickType === 'x') {
@@ -702,15 +698,16 @@ function clearAllAutoXMarkers() {
 function recalculateAutoXMarkers() {
     // For each bean on the board, calculate which cells should have automatic Xs
     beansPlaced.forEach(bean => {
-        autoFillXMarkers(bean.row, bean.col);
+        autoFillXMarkers(bean.row, bean.col, bean.region);
     });
 }
 
 // ===== AUTO-FILL X MARKERS =====
 // When a bean is placed, this automatically marks all cells where another bean cannot go
-// This includes: same row, same column, and all 8 surrounding cells (no diagonal beans allowed)
+// This includes: same row, same column, all 8 surrounding cells (no diagonal beans allowed),
+// and all remaining cells in the same colored region
 
-function autoFillXMarkers(beanRow, beanCol) {
+function autoFillXMarkers(beanRow, beanCol, regionIndex = null) {
     // Check every cell on the board
     for (let i = 0; i < gridSize; i++) {
         for (let j = 0; j < gridSize; j++) {
@@ -726,11 +723,15 @@ function autoFillXMarkers(beanRow, beanCol) {
             const hasAutoX = autoXMarkers.some(x => x.row === i && x.col === j);
             if (hasAutoX) continue;
             
+            // Get the region of the current cell
+            const cellRegion = regions[i * gridSize + j];
+            
             // Determine if this cell should be marked with an automatic X
             const shouldMarkX = 
                 i === beanRow || // Same row as the bean
                 j === beanCol || // Same column as the bean
-                (Math.abs(i - beanRow) <= 1 && Math.abs(j - beanCol) <= 1); // Touching the bean (including diagonally)
+                (Math.abs(i - beanRow) <= 1 && Math.abs(j - beanCol) <= 1) || // Touching the bean (including diagonally)
+                (regionIndex !== null && cellRegion === regionIndex); // Same region as the bean
             
             if (shouldMarkX) {
                 // Add to automatic X markers array
@@ -894,8 +895,11 @@ function showSolution() {
     
     // Place all solution beans on the board
     solution.forEach(bean => {
-        // Add to beansPlaced array
-        beansPlaced.push({row: bean.row, col: bean.col});
+        // Get the region index for this cell
+        const regionIndex = regions[bean.row * gridSize + bean.col];
+        
+        // Add to beansPlaced array with region tracking
+        beansPlaced.push({row: bean.row, col: bean.col, region: regionIndex});
         
         // Find the cell and add the visual bean
         const cell = document.querySelector(`[data-row="${bean.row}"][data-col="${bean.col}"]`);

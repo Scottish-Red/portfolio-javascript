@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,29 +10,37 @@
     </head>
 
     <body>
+        <!-- Main game area for dice rolling -->
         <main>
-            <h1>Welcome to Pair-O-Dice!</h1>  <!-- This displays the winner; Either Player 1 or Player 2, or draw -->
+            <!-- This displays the winner; Either Player 1 or Player 2, or draw -->
+            <h1>Welcome to Pair-O-Dice!</h1>
 
+            <!-- Primary action button -->
             <div class="container">
                 <button id="btnRoll">Roll the Dice</button>
             </div>
 
+            <!-- Player 1 dice display -->
             <div class="dice">
                 <p>Player 1</p>
                 <img class="img1" src="" alt="">
             </div>
 
+            <!-- Player 2 dice display -->
             <div class="dice">
                 <p>Player 2</p>
                 <img class="img2" src="" alt="">
             </div>
         </main>
+
         <script src="scripts.js"></script>
         <script>
             document.getElementById("btnRoll").addEventListener("click", btnRoll);
         </script>
     </body>
 
-    <footer><div></div></footer>
+    <footer>
+        <div></div>
+    </footer>
 
 </html>

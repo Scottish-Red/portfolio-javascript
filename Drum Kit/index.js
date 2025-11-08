@@ -1,4 +1,9 @@
-// Function to play sound based on key
+// ===== DRUM KIT SOUND PLAYER =====
+// This app allows users to play drum sounds by clicking buttons or pressing keyboard keys
+
+// ===== SOUND PLAYBACK FUNCTION =====
+// Maps each key to its corresponding drum sound file
+
 function playSound(key) {
     switch (key) {
         case "w":
@@ -23,41 +28,26 @@ function playSound(key) {
             new Audio("sounds/kick-bass.mp3").play();
             break;
         default:
-            // Optional: handle other keys
+            // No sound for unrecognized keys
             break;
     }
 }
 
-// Mouse click event
-for (var i = 0; i < buttonCount; i++) {
-    document.querySelectorAll(".drum")[i].addEventListener("click", function () {
-        playSound(this.innerHTML);
-    });
-}
+// ===== EVENT LISTENERS =====
+// Set up both mouse click and keyboard press handlers
 
-// Keyboard press event
-document.addEventListener("keydown", function (event) {
-    playSound(event.key);
-});
-
+// Get the count of drum buttons for iteration
 var buttonCount = document.querySelectorAll(".drum").length;
 
+// Mouse click event - play sound when button is clicked
 for (var i = 0; i < buttonCount; i++) {
-    document.querySelectorAll(".drum")[i].addEventListener("click", function() {
-        if (this.innerHTML === "W") {
-            new Audio("sounds/tom-1.mp3").play(); // Creates a new audio object & plays the sound on click
-        } else if (this.innerHTML === "A") {
-            new Audio("sounds/tom-2.mp3").play();
-        } else if (this.innerHTML === "S") {
-            new Audio("sounds/tom-3.mp3").play();
-        } else if (this.innerHTML === "D") {
-            new Audio("sounds/tom-4.mp3").play();
-        } else if (this.innerHTML === "J") {
-            new Audio("sounds/snare.mp3").play();
-        } else if (this.innerHTML === "K") {
-            new Audio("sounds/crash.mp3").play();
-        } else if (this.innerHTML === "L") {
-            new Audio("sounds/kick-bass.mp3").play();
-        }
+    document.querySelectorAll(".drum")[i].addEventListener("click", function () {
+        // Get the button's text content (W, A, S, D, J, K, or L) and convert to lowercase
+        playSound(this.innerHTML.toLowerCase());
     });
 }
+
+// Keyboard press event - play sound when corresponding key is pressed
+document.addEventListener("keydown", function (event) {
+    playSound(event.key.toLowerCase());
+});
