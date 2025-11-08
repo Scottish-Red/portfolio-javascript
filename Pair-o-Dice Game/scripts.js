@@ -6,11 +6,11 @@
 
 function btnRoll() {
     // Generate random dice (1-6) for Player 1
-    var outputOne = "../images/dice" + [Math.floor(Math.random() * 6) + 1] + ".png";
+    var outputOne = "../Assets/images/dice" + [Math.floor(Math.random() * 6) + 1] + ".png";
     document.querySelector(".img1").setAttribute("src", outputOne);
 
     // Generate random dice (1-6) for Player 2
-    var outputTwo = "../images/dice" + [Math.floor(Math.random() * 6) + 1] + ".png";
+    var outputTwo = "../Assets/images/dice" + [Math.floor(Math.random() * 6) + 1] + ".png";
     document.querySelector(".img2").setAttribute("src", outputTwo);
 
     // Determine winner by comparing dice image paths (higher number wins)
