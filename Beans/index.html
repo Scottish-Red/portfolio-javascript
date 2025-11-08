@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Beans - Logic Puzzle Game</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <!-- Main app shell for the Beans puzzle experience -->
+        <div class="container">
+            <header>
+                <h1>🫘 Beans</h1>
+                <p class="subtitle">Place the lilac beans following the rules!</p>
+            </header>
+            
+            <!-- Top panel: gameplay rules and live stats -->
+            <div class="game-info">
+                <div class="rules">
+                    <h2>Rules:</h2>
+                    <ul>
+                        <li>Each row must have exactly one bean</li>
+                        <li>Each column must have exactly one bean</li>
+                        <li>Each colored region must have exactly one bean</li>
+                        <li>Beans cannot touch each other (including diagonally)</li>
+                        <li>There will only ever be 1 solution. You do not need to guess!</li>
+                    </ul>
+                </div>
+                
+                <div class="game-stats">
+                    <div class="stat">
+                        <span class="stat-label">Beans Placed:</span>
+                        <span id="beansPlaced">0</span> / <span id="totalBeans">8</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Time:</span>
+                        <span id="timer">00:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game board grid is injected dynamically -->
+            <div id="gameBoard" class="game-board"></div>
+
+            <!-- Primary actions for puzzle management -->
+            <div class="controls">
+                <button id="newGame" class="btn btn-primary">New Game</button>
+                <button id="checkSolution" class="btn btn-secondary">Check Solution</button>
+                <button id="showSolution" class="btn btn-secondary">Show Solution</button>
+                <button id="clearBoard" class="btn btn-secondary">Clear Board</button>
+            </div>
+
+            <!-- Helper controls for auto-fill toggles -->
+            <div class="controls-info">
+                <p><strong>Left-click:</strong> Place or remove beans</p>
+                <p><strong>Right-click:</strong> Place or remove X markers</p>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="autoFillX" checked>
+                    Auto-fill X markers
+                </label>
+            </div>
+
+        <!-- Status banner used for errors, hints, and success states -->
+        <div id="message" class="message"></div>
+        </div>
+
+        <script src="scripts.js"></script>
+    </body>
+
+    <footer><div></div></footer>
+
+</html>
