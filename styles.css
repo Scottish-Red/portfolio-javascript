@@ -1,4 +1,4 @@
-.hero-avatar img {
+.header-avatar img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -14,9 +14,9 @@
     padding: 20px;
 }
 
-.hero-buttons {margin: auto;}
+.header-buttons {margin: auto;}
 
-.hero-buttons a {
+.header-buttons a {
     color: #6e15aa;
     text-decoration: none;
     margin: 0 20px;
