@@ -1,6 +1,6 @@
-# portfolio-javascript
+# portfolio
 
-This is my portfolio site for all my javascript projects.
+This is my portfolio site for all of my web-based projects.
 
 Files include:
 
